@@ -29,5 +29,29 @@ export default new Vuex.Store({
         commit('syncMinus', payload)
       }, 1000)
     }
+  },
+  modules: {
+    a: {
+      state: {
+        x: 1
+      },
+      modules: {
+        c: {
+          state: {
+            z: 123
+          },
+          mutations: {
+            syncAdd (state, payload) {
+              console.log('c-mutations')
+            }
+          }
+        }
+      }
+    },
+    b: {
+      state: {
+        y: 2
+      }
+    }
   }
 })

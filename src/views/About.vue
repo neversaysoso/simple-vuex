@@ -4,6 +4,12 @@
     <button @click="minus">-</button>
     <h1>年龄：{{$store.getters.myAge}}</h1>
     <button @click="add">+</button>
+    <div>
+      模块数据：
+      a.x: {{$store.state.a.x}}
+      b.y: {{$store.state.b.y}}
+      a.c.z: {{$store.state.a.c.z}}
+    </div>
   </div>
 </template>
 
