@@ -40,6 +40,13 @@ export default new Vuex.Store({
           state: {
             z: 123
           },
+          actions: {
+            asyncMinus ({ commit }, payload) {
+              setTimeout(() => {
+                console.log('c-actions')
+              }, 1000)
+            }
+          },
           mutations: {
             syncAdd (state, payload) {
               console.log('c-mutations')
